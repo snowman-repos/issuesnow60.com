@@ -1,0 +1,40 @@
+{
+  "name": "issuesnow60.com",
+  "version": "1.0.0",
+  "description": "A website celebrating 60 years of mum.",
+  "main": "index.js",
+  "author": "Darryl & Grace Snow",
+  "homepage": "https://issuesnow60.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/darryl-snow/issuesnow60.com.git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "start": "yarn run dev:compile:html | yarn run dev:compile:css | yarn run dev:compile:js",
+    "dev:compile:html": "pug ./src/index.pug -o ./public -O ./package.json -w -P",
+    "dev:compile:css": "stylus ./src/css/index.styl -o ./public -l -w",
+    "dev:compile:js": "babel ./src/js/index.js --out-file ./public/index.js --source-maps --watch",
+    "build": "yarn run prod:compile:html | yarn run prod:compile:css | yarn run prod:compile:js",
+    "prod:compile:html": "pug ./src/index.pug -o ./public -O ./package.json",
+    "prod:compile:css": "stylus ./src/css/index.styl -o ./public -c",
+    "prod:compile:js": "babel ./src/js/index.js --out-file ./public/index.js",
+    "server": "cd ./public && python -m SimpleHTTPServer 8000"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-minify": "^0.4.3",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.9.1",
+    "html-minifier": "^3.5.16",
+    "imagemin-cli": "^3.0.0",
+    "pug-cli": "^1.0.0-alpha6",
+    "stylus": "^0.54.5",
+    "uglify-js": "^3.4.0"
+  }
+}
