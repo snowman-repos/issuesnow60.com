@@ -9,16 +9,21 @@
     "type": "git",
     "url": "https://github.com/darryl-snow/issuesnow60.com.git"
   },
+  "config": {
+    "title": "Is Sue Snow 60?"
+  },
   "license": "MIT",
   "scripts": {
-    "start": "yarn run dev:compile:html | yarn run dev:compile:css | yarn run dev:compile:js",
+    "start": "yarn run dev:compile:html | yarn run dev:compile:css | yarn run dev:compile:js | yarn run dev:compile:img",
     "dev:compile:html": "pug ./src/index.pug -o ./public -O ./package.json -w -P",
     "dev:compile:css": "stylus ./src/css/index.styl -o ./public -l -w",
     "dev:compile:js": "babel ./src/js/index.js --out-file ./public/index.js --source-maps --watch",
-    "build": "yarn run prod:compile:html | yarn run prod:compile:css | yarn run prod:compile:js",
+    "dev:compile:img": "imagemin ./src/img/* -o ./public/img && cp ./src/img/browserconfig.xml ./public/img/ && cp ./src/img/favicon.ico ./public/img/ && cp ./src/img/safari-pinned-tab.svg ./public/img/ && cp ./src/img/site.webmanifest ./public/img/",
+    "build": "yarn run prod:compile:html | yarn run prod:compile:css | yarn run prod:compile:js | yarn run prod:compile:img",
     "prod:compile:html": "pug ./src/index.pug -o ./public -O ./package.json",
     "prod:compile:css": "stylus ./src/css/index.styl -o ./public -c",
     "prod:compile:js": "babel ./src/js/index.js --out-file ./public/index.js",
+    "prod:compile:img": "imagemin ./src/img/* -o ./public/img && cp ./src/img/browserconfig.xml ./public/img/ && cp ./src/img/favicon.ico ./public/img/ && cp ./src/img/safari-pinned-tab.svg ./public/img/ && cp ./src/img/site.webmanifest ./public/img/",
     "server": "cd ./public && python -m SimpleHTTPServer 8000"
   },
   "devDependencies": {

@@ -28,8 +28,8 @@ TODO
 ##
 
 - [x] Set up project
-- [ ] Minify & rename images
-- [ ] Favicon
+- [x] Minify & rename images
+- [x] Favicon
 - [ ] Do CSS + content
 - [ ] JS
 - [ ] Get domain
