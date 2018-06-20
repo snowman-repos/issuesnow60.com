@@ -1,6 +1,6 @@
 # isSueSnow60.com
 
-A website to celebrate 60 years of mum on 14-07-2018.
+A website to celebrate 60 years of mum on 13-07-2018.
 
 # Pre-Requisites
 

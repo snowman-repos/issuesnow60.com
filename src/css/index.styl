@@ -1,6 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:700|Shrikhand')
+
+font-family--serif = 'Shrikhand', cursive
+font-family--sans-serif = 'Open Sans', sans-serif
+
 *
   box-sizing border-box
 
-.o-section
+body
+  font-family font-family--sans-serif
+  margin 0
+  padding 0
+
+.c-image-grid
+  display grid
+  grid-template-columns auto auto auto auto auto
+  grid-gap 0
   height 100vh
-  min-height 15rem
+  width 100vw
+
+  &-item
+    background-color white
+    background-position 50% 50%
+    background-size cover
+    opacity 0
+    transition 0.2s all ease-in-out
