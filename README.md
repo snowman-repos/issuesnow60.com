@@ -30,7 +30,7 @@ TODO
 - [x] Set up project
 - [x] Minify & rename images
 - [x] Favicon
-- [ ] Do CSS + content
-- [ ] JS
+- [x] Do CSS + content
+- [x] JS
 - [ ] Get domain
 - [ ] Publish to gh-pages
