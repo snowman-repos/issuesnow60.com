@@ -15,16 +15,16 @@
   "license": "MIT",
   "scripts": {
     "start": "yarn run dev:compile:html | yarn run dev:compile:css | yarn run dev:compile:img | yarn run dev:compile:js",
-    "dev:compile:html": "pug ./src/index.pug -o ./public -O ./package.json -w -P",
-    "dev:compile:css": "stylus ./src/css/index.styl -o ./public -l -w",
+    "dev:compile:html": "pug ./src/index.pug -o ./docs -O ./package.json -w -P",
+    "dev:compile:css": "stylus ./src/css/index.styl -o ./docs -l -w",
     "dev:compile:js": "webpack",
-    "dev:compile:img": "imagemin ./src/img/* -o ./public/img && cp ./src/img/browserconfig.xml ./public/img/ && cp ./src/img/favicon.ico ./public/img/ && cp ./src/img/safari-pinned-tab.svg ./public/img/ && cp ./src/img/site.webmanifest ./public/img/",
+    "dev:compile:img": "imagemin ./src/img/* -o ./docs/img && cp ./src/img/browserconfig.xml ./docs/img/ && cp ./src/img/favicon.ico ./docs/img/ && cp ./src/img/safari-pinned-tab.svg ./docs/img/ && cp ./src/img/site.webmanifest ./docs/img/",
     "build": "yarn run prod:compile:html | yarn run prod:compile:css | yarn run prod:compile:img | yarn run prod:compile:js",
-    "prod:compile:html": "pug ./src/index.pug -o ./public -O ./package.json",
-    "prod:compile:css": "stylus ./src/css/index.styl -o ./public -c",
+    "prod:compile:html": "pug ./src/index.pug -o ./docs -O ./package.json",
+    "prod:compile:css": "stylus ./src/css/index.styl -o ./docs -c",
     "prod:compile:js": "webpack",
-    "prod:compile:img": "imagemin ./src/img/* -o ./public/img && cp ./src/img/browserconfig.xml ./public/img/ && cp ./src/img/favicon.ico ./public/img/ && cp ./src/img/safari-pinned-tab.svg ./public/img/ && cp ./src/img/site.webmanifest ./public/img/",
-    "server": "cd ./public && python -m SimpleHTTPServer 8000"
+    "prod:compile:img": "imagemin ./src/img/* -o ./docs/img && cp ./src/img/browserconfig.xml ./docs/img/ && cp ./src/img/favicon.ico ./docs/img/ && cp ./src/img/safari-pinned-tab.svg ./docs/img/ && cp ./src/img/site.webmanifest ./docs/img/",
+    "server": "cd ./docs && python -m SimpleHTTPServer 8000"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
