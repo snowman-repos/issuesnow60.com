@@ -17,7 +17,7 @@ export default class ImageWall {
     const { images } = this.state;
     const { imageFadeClass } = this.props;
     for (let i = 0; i < images.length; i += 1) {
-      images[i].style.backgroundImage = `url(/img/mum-${this.getRandomImage()}.jpg)`;
+      images[i].style.backgroundImage = `url(img/mum-${this.getRandomImage()}.jpg)`;
       images[i].classList.remove(imageFadeClass);
     }
     callback();
@@ -43,7 +43,7 @@ export default class ImageWall {
     const { imageFadeClass, imageTransitionTime } = this.props;
     const index = this.getRandomImageContainer();
     images[index].classList.add(imageFadeClass);
-    images[index].style.backgroundImage = `url(/img/mum-${this.getRandomImage()}.jpg)`;
+    images[index].style.backgroundImage = `url(img/mum-${this.getRandomImage()}.jpg)`;
     setTimeout(() => {
       images[index].classList.remove(imageFadeClass);
     }, imageTransitionTime);
