@@ -3,7 +3,7 @@ export default class AgeCalculator {
   constructor() {
     this.props = {
       answer: document.querySelector('.js-answer'),
-      birthday: +new Date('1958-07-13 00:00:00'),
+      birthday: +new Date('1958-07-13'),
       realAge: document.querySelector('.js-real-age'),
     };
     this.setAnswer();
