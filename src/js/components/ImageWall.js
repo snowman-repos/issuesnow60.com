@@ -5,7 +5,7 @@ export default class ImageWall {
     this.props = {
       imageFadeClass: 'u-fade-out',
       imageTransitionTime: 1000,
-      numberOfImages: 26,
+      numberOfImages: 39,
     };
     this.state = {
       images: document.querySelectorAll('.js-image'),
