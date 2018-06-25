@@ -32,5 +32,5 @@ TODO
 - [x] Favicon
 - [x] Do CSS + content
 - [x] JS
-- [ ] Get domain
-- [ ] Publish to gh-pages
+- [x] Get domain
+- [x] Publish to gh-pages
